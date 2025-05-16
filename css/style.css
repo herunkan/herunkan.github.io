@@ -118,13 +118,14 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 nav ul li a {
     color: var(--dark-color);
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 0.9rem;
 }
 
 nav ul li a:hover {
@@ -185,6 +186,108 @@ nav ul li a:hover {
     font-size: 1.1rem;
 }
 
+/* Education Section */
+#education {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.education-item .degree {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.education-item .minor {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.education-item .duration, .education-item .gpa {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Section */
+#experience {
+    padding: 6rem 0;
+    background-color: var(--light-color);
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.experience-item .position {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.experience-item .location, .experience-item .duration {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .responsibilities {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.experience-item .responsibilities li {
+    margin-bottom: 0.5rem;
+}
+
 /* Projects Section */
 #projects {
     padding: 6rem 0;
@@ -193,8 +296,10 @@ nav ul li a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -214,10 +319,27 @@ nav ul li a:hover {
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .project-card p {
     margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
 }
 
 .project-links {
@@ -226,7 +348,7 @@ nav ul li a:hover {
 }
 
 .project-links a {
-    background-color: var(--primary-color);
+    background-color: var(--dark-color);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -248,6 +370,8 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .skill-category {
@@ -255,11 +379,17 @@ nav ul li a:hover {
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
 }
 
 .skill-category h3 {
     margin-bottom: 1.5rem;
     text-align: center;
+    color: var(--primary-color);
 }
 
 .skills-list {
@@ -274,6 +404,12 @@ nav ul li a:hover {
     border-radius: 5px;
     font-size: 0.9rem;
     font-weight: 500;
+    transition: all 0.3s;
+}
+
+.skills-list li:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* Contact Section */
@@ -332,10 +468,12 @@ footer {
     
     nav ul {
         margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     nav ul li {
-        margin: 0 0.7rem;
+        margin: 0.3rem 0.5rem;
     }
     
     .hero-content h2 {
@@ -368,5 +506,13 @@ footer {
         display: block;
         width: 100%;
         margin-bottom: 1rem;
+    }
+    
+    .education-item, .experience-item, .project-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .experience-item h3, .education-item h3, .project-card h3 {
+        font-size: 1.3rem;
     }
 } 
